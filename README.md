@@ -1,45 +1,36 @@
-# todos-express-starter
+# todos-express-google
 
-This is a starter kit for building a todo app with sign in functionality using
-[Express](https://expressjs.com/), [Passport](https://www.passportjs.org/) and
-[SQLite](https://www.sqlite.org/).
+This app illustrates how to use [Passport](https://www.passportjs.org/) with
+[Express](https://expressjs.com/) to sign users in with [Google](https://www.google.com/).
+Use this example as a starting point for your own web applications.
 
-The following is a list of complete, working example apps that have been built
-using this kit as a starting point.
+## Quick Start
 
-* [todos-express-password](https://github.com/passport/todos-express-password)
+To run this app, clone the repository and install dependencies:
 
-  Illustrates how to sign in with a username and password.
+```bash
+$ git clone https://github.com/passport/todos-express-google.git
+$ cd todos-express-google
+$ npm install
+```
 
-* [todos-express-password-flash](https://github.com/passport/todos-express-password-flash)
+This app requires OAuth 2.0 credentials from Google, which can be obtained by
+[setting up](https://developers.google.com/identity/protocols/oauth2/openid-connect#appsetup)
+a project in [Google API console](https://console.developers.google.com/apis/).
+The redirect URI of the OAuth client should be set to `'http://localhost:3000/oauth2/redirect/google'`.
 
-  Illustrates how to sign in with a username and password and use the flash for
-  informative messages.
+Once credentials have been obtained, create a `.env` file and add the following
+environment variables:
 
-* [todos-express-google](https://github.com/passport/todos-express-google)
+```
+GOOGLE_CLIENT_ID=__INSERT_CLIENT_ID_HERE__
+GOOGLE_CLIENT_SECRET=__INSERT_CLIENT_SECRET_HERE__
+```
 
-  Illustrates how to sign in with Google via OpenID Connect.
+Start the server.
 
-* [todos-express-google-oauth2](https://github.com/passport/todos-express-google-oauth2)
+```bash
+$ npm start
+```
 
-  Illustrates how to sign in with Google via OAuth 2.0.
-
-* [todos-express-email](https://github.com/passport/todos-express-email)
-
-  Illustrates how to sign in with email via magic link.
-
-* [todos-express-auth0](https://github.com/passport/todos-express-auth0)
-
-  Illustrates how to implement sign in by integrating with Auth0 via OpenID Connect.
-
-* [todos-express-openidconnect](https://github.com/passport/todos-express-openidconnect)
-
-  Illustrates how to implement sign in by integrating with an identity provider (IdP) via OpenID Connect.
-
-## License
-
-[The Unlicense](https://opensource.org/licenses/unlicense)
-
-## Credit
-
-Created by [Jared Hanson](https://www.jaredhanson.me/)
+Navigate to [`http://localhost:3000`](http://localhost:3000).
