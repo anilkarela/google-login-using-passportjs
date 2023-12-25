@@ -10,7 +10,7 @@ To run this app, clone the repository and install dependencies:
 
 ```bash
 $ git clone https://github.com/anilkarela/google-login-using-passportjs
-$ cd todos-express-google
+$ cd google-login-using-passportjs
 $ npm install
 ```
 
